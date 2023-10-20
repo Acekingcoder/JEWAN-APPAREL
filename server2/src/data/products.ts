@@ -1,6 +1,6 @@
 const products = [
   {
-    _id: 1,
+    id: 1,
     name: "Diamond Engagement Ring",
     image: "/images/airpods.jpg",
     description:
@@ -13,7 +13,7 @@ const products = [
     numReviews: 120,
   },
   {
-    _id: 2,
+    id: 2,
     name: "Pearl Necklace",
     image: "/images/alexa.jpg",
     description:
@@ -26,7 +26,7 @@ const products = [
     numReviews: 95,
   },
   {
-    _id: 3,
+    id: 3,
     name: "Sapphire and Diamond Earrings",
     image: "/images/camera.jpg",
     description:
@@ -39,7 +39,7 @@ const products = [
     numReviews: 85,
   },
   {
-    _id: 4,
+    id: 4,
     name: "Emerald Bracelet",
     image: "/images/mouse.jpg",
     description:
@@ -52,7 +52,7 @@ const products = [
     numReviews: 75,
   },
   {
-    _id: 5,
+    id: 5,
     name: "Diamond Tennis Necklace",
     image: "/images/phone.jpg",
     description:
@@ -65,7 +65,7 @@ const products = [
     numReviews: 68,
   },
   {
-    _id: 6,
+    id: 6,
     name: "Ruby and Diamond Ring",
     image: "/images/playstation.jpg",
     description:
@@ -78,7 +78,7 @@ const products = [
     numReviews: 52,
   },
   {
-    _id: 7,
+    id: 7,
     name: "Opal Pendant Necklace",
     image: "/images/phone.jpg",
     description:
@@ -91,7 +91,7 @@ const products = [
     numReviews: 92,
   },
   {
-    _id: 8,
+    id: 8,
     name: "Gold Hoop Earrings",
     image: "/images/alexa.jpg",
     description:
@@ -104,7 +104,7 @@ const products = [
     numReviews: 63,
   },
   {
-    _id: 9,
+    id: 9,
     name: "Diamond Wedding Band",
     image: "/images/airpods.jpg",
     description:
@@ -117,7 +117,7 @@ const products = [
     numReviews: 42,
   },
   {
-    _id: 10,
+    id: 10,
     name: "Sapphire Tennis Bracelet",
     image: "/images/mouse.jpg",
     description:
