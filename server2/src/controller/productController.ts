@@ -98,3 +98,30 @@ export const addProduct = async (
     res.status(500).json({ error: "An error occurred while adding product" });
   }
 };
+
+export const updateProduct = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const productId = req.params.id;
+    const updatedProductData = req.body;
+
+    const product = await ProductModel.findByIdAndUpdate(
+      productId,
+      updatedProductData,
+      { new: true }
+    );
+
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+
+    res.status(200).json({ message: "Product updated successfully", product });
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: "An error occurred while updating product", error });
+  }
+};

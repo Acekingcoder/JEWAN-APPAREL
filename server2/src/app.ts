@@ -7,6 +7,7 @@ import cors from "cors";
 
 import indexRouter from "./routes/index";
 import usersRouter from "./routes/users";
+import orders from "./routes/orders";
 import products from "./routes/products";
 import connectDB from "./config/db";
 
@@ -15,7 +16,7 @@ connectDB();
 
 // view engine setup
 app.set("views", path.join(__dirname, "..", "views"));
-app.set("view engine", "jade");
+app.set("view engine", "ejs");
 
 app.use(cors());
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api/products", products);
+app.use("/api/orders", orders);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

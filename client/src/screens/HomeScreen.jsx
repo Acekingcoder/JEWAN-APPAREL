@@ -18,7 +18,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
-          <h1>Latest Products</h1>
+          <h1>Check Out Our Latest Products</h1>
           <Row>
             {products.map((product) => (
               <Col
@@ -29,7 +29,9 @@ const HomeScreen = () => {
                 xl={3}
                 className="fixed-col"
               >
-                <Product product={product} />
+                <div className="product-container">
+                  <Product product={product} />
+                </div>
               </Col>
             ))}
           </Row>

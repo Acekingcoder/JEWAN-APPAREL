@@ -51,4 +51,8 @@ table th {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-/* styles.css */
+.product-container {
+  height: 50%; /* Set a fixed height here, adjust as needed */
+  display: flex;
+  flex-direction: column;
+}

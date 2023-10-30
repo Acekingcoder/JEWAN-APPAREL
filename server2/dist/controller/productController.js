@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addProduct = exports.deleteProduct = exports.getProductById = exports.getProducts = void 0;
+exports.updateProduct = exports.addProduct = exports.deleteProduct = exports.getProductById = exports.getProducts = void 0;
 const productModel_1 = __importDefault(require("../models/productModel"));
 // @desc Fetch all products
 // @route GET /api/products
@@ -89,3 +89,20 @@ const addProduct = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     }
 });
 exports.addProduct = addProduct;
+const updateProduct = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const productId = req.params.id;
+        const updatedProductData = req.body;
+        const product = yield productModel_1.default.findByIdAndUpdate(productId, updatedProductData, { new: true });
+        if (!product) {
+            return res.status(404).json({ error: "Product not found" });
+        }
+        res.status(200).json({ message: "Product updated successfully", product });
+    }
+    catch (error) {
+        res
+            .status(500)
+            .json({ message: "An error occurred while updating product", error });
+    }
+});
+exports.updateProduct = updateProduct;
