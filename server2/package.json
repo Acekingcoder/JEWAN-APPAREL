@@ -7,6 +7,9 @@
     "compile": "tsc --watch",
     "ken": "nodemon ./bin/www"
   },
+  "engines": {
+    "node": "18"
+  },
   "dependencies": {
     "@types/bcryptjs": "^2.4.4",
     "@types/cookie-parser": "^1.4.4",
